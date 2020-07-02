@@ -9,10 +9,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'data_collection'
+BOT_NAME = 'web_crawler'
 
-SPIDER_MODULES = ['data_collection.spiders']
-NEWSPIDER_MODULE = 'data_collection.spiders'
+SPIDER_MODULES = ['web_crawler.spiders']
+NEWSPIDER_MODULE = 'web_crawler.spiders'
 
 DOWNLOADER_MIDDLEWARES = {
     'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
@@ -21,7 +21,7 @@ DOWNLOADER_MIDDLEWARES = {
 ROTATING_PROXY_LIST_PATH = 'proxies.txt'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'data_collection (+http://www.yourdomain.com)'
+#USER_AGENT = 'web_crawler (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -52,13 +52,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'data_collection.middlewares.DataCollectionSpiderMiddleware': 543,
+#    'web_crawler.middlewares.DataCollectionSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'data_collection.middlewares.DataCollectionDownloaderMiddleware': 543,
+#    'web_crawler.middlewares.DataCollectionDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -70,7 +70,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'data_collection.pipelines.DataCollectionPipeline': 300,
+#    'web_crawler.pipelines.DataCollectionPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
