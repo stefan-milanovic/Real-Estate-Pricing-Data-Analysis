@@ -74,9 +74,9 @@ class RealEstate:
 
     def parse_registered(self, data):
         if (data == 'Uknji\u017eeno'):
-            self.registed = True
+            self.registered = 1
         else:
-            self.registered = False
+            self.registered = 0
 
     def parse_rooms(self, data):
         if (data != ''):
