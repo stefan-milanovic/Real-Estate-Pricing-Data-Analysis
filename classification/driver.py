@@ -1,6 +1,6 @@
 import mysql.connector
 import numpy as np
-from k_closest_neighbours import KClosestNeighbours
+from k_nearest_neighbours import KNearestNeighbours
 from mysql.connector import Error
 
 from sklearn.metrics import mean_squared_error
@@ -151,7 +151,7 @@ if __name__ == '__main__':
 
     for distance_function in ['euclid', 'manhattan', 'chebyshev']:
         for k in range(1, int(np.round(np.sqrt(real_estates_train.shape[0]))), 2):
-         model = KClosestNeighbours(k = k, distance_function = distance_function)
+         model = KNearestNeighbours(k = k, distance_function = distance_function)
          model.fit(real_estates_train, classes_train)
          predictions = model.predict(real_estates_test)
          

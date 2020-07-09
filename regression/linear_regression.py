@@ -43,7 +43,7 @@ class PSZLinearRegression:
         self.W = np.random.rand((Xtrain.shape[1]))
 
         # Iteratively update W for n_steps.
-        for i in range(self.n_steps):
+        for _unused_i in range(self.n_steps):
             self.W = self.W - self.learning_rate * self.calc_gradient(Xtrain, Y)
 
     def predict(self, X):

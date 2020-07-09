@@ -1,7 +1,7 @@
 import numpy as np
 import operator
 
-class KClosestNeighbours:
+class KNearestNeighbours:
 
     available_distance_functions = ['euclid', 'manhattan', 'chebyshev']
 
