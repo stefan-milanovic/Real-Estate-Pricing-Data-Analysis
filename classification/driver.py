@@ -148,7 +148,6 @@ if __name__ == '__main__':
     real_estates_train, real_estates_test, classes_train, classes_test = stratified_split_test_train(real_estates, classes, test_size=0.2)
     
     # Test the model.
-
     for distance_function in ['euclid', 'manhattan', 'chebyshev']:
         for k in range(1, int(np.round(np.sqrt(real_estates_train.shape[0]))), 2):
          model = KNearestNeighbours(k = k, distance_function = distance_function)

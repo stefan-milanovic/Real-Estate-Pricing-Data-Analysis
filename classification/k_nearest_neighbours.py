@@ -5,9 +5,9 @@ class KNearestNeighbours:
 
     available_distance_functions = ['euclid', 'manhattan', 'chebyshev']
 
-    # Optimal k from testing so far is k = 5, so it has been placed as default.
+    # Optimal k from testing so far is k = 7, so it has been placed as default.
     # Optimal distance function so far is manhattan, so it has been placed as default.
-    def __init__(self, k = 5, distance_function = 'manhattan'):
+    def __init__(self, k = 7, distance_function = 'manhattan'):
         self.k = k
         if (distance_function not in self.available_distance_functions):
             self.distance_function = 'manhattan'
